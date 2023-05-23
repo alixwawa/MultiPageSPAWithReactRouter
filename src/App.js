@@ -6,14 +6,17 @@ import ErrorPage from './pages/Error';
 import ProductDetailPage from './pages/ProductDetail';
 
 const router = createBrowserRouter([
-	{
+  {
+    // absolute path
 		path: '/',
 		element: <RootLayout />,
 		errorElement: <ErrorPage />,
-		children: [
-			{ path: '/', element: <HomePage /> },
-			{ path: '/products', element: <ProductsPage /> },
-			{ path: '/products/:productId', element: <ProductDetailPage /> },
+    children: [
+      // these are relative paths because no forward slash / is at the beginning 
+      // therefore these paths are appended to the end of the parent path
+			{ path: '', element: <HomePage /> },
+			{ path: 'products', element: <ProductsPage /> },
+			{ path: 'products/:productId', element: <ProductDetailPage /> },
 		],
 	},
 	,
