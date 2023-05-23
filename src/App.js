@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       // these are relative paths because no forward slash / is at the beginning 
       // therefore these paths are appended to the end of the parent path
-			{ path: '', element: <HomePage /> },
+			{ index: true, element: <HomePage /> },
 			{ path: 'products', element: <ProductsPage /> },
 			{ path: 'products/:productId', element: <ProductDetailPage /> },
 		],
